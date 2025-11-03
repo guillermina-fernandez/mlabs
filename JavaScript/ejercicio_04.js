@@ -17,9 +17,10 @@ function titleCase(str) {
     let wordsArray = str.split(' ');
     let titleArray = []
     wordsArray.map(word => {
+        word = word.toLowerCase();
         titleArray.push(word.charAt(0).toUpperCase() + word.slice(1));
     })
     return titleArray.join(' ');
 }
 
-console.log(titleCase('esta es mi frase, con la primer letra de cada palabra capitalizada.'))
+console.log(titleCase('esta es MI frase, con la primer letra de cada palabra capitalizada.'))
