@@ -11,13 +11,15 @@ function cc(card) {
     card = formatCard(card);
     if (addOne.includes(card)) {
         count += 1;
-        return count;
+        return;
     } else if (addCero.includes(card)) {
-        return count;
+        return;
     } else if (restOne.includes(card)) {
         count -= 1;
-        return count;
+        return;
     }
+    card === 1 ? console.log('Ingrese el As como "A".') : console.log('Ingrese un valor de carta válido.');
+    console.log('El siguiente resultado no es correcto:')
 }
 
 cc(2);

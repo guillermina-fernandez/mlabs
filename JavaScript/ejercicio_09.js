@@ -1,3 +1,5 @@
+// Se ignorará todo lo que no sea número.
+
 function addOnlyNums(...rest) {
     let result = 0
     rest.forEach(arg => {

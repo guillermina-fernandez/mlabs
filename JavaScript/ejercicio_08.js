@@ -1,9 +1,11 @@
-// Suponemos que los args son números separados por coma.
+// Se ignorará todo lo que no sea número.
 
-function sumArgs(num, ...rest) {
-    let result = num;
-    rest.forEach(adicional => {
-        result += adicional;
+function sumArgs(...rest) {
+    let result = 0;
+    rest.forEach(num => {
+        if (typeof num === 'number') {
+            result += num;
+        }
     })
     return result;
 }

@@ -12,7 +12,11 @@ const carrito = {
     get precioTotal() {
         let total = 0
         this.productos.forEach(prod => {
-            total += (prod.precio * prod.unidades);
+            if (unidades && precio) {
+                total += (prod.precio * prod.unidades);   
+            } else {
+                return 'Ingresar unidades y precio para el producto: ' + prod.nombre
+            }
         })
         return total;
     }
