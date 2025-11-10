@@ -206,3 +206,18 @@ function getPointsFor(letter: string) {
 const word = 'zoologico'
 
 console.log('[Ejercicio 3.3]', `${word} vale ${computeScore(word)} puntos.`);
+
+
+// EJERCICIO 3.4
+
+function greet(greeting?: string): string {
+    return greeting ? greeting.toUpperCase() : 'hola';
+}
+
+const defaultGreeting = greet();
+const portugueseGreeting = greet('Oi como vai!');
+
+console.log('[Ejercicio 3.4]', defaultGreeting, portugueseGreeting);
+
+
+
