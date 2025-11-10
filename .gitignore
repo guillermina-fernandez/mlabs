@@ -1,0 +1,35 @@
+# TypeScript compilation output
+typescript/dist/
+typescript/build/
+typescript/out/
+
+# Dependencies
+typescript/node_modules/
+
+# TypeScript cache
+typescript/*.tsbuildinfo
+
+# Environment variables
+typescript/.env
+typescript/.env.local
+
+# IDE/Editor files
+typescript/.vscode/
+typescript/.idea/
+typescript/*.swp
+typescript/*.swo
+typescript/*~
+
+# OS files
+typescript/.DS_Store
+typescript/Thumbs.db
+
+# Logs
+typescript/*.log
+typescript/npm-debug.log*
+typescript/yarn-debug.log*
+typescript/yarn-error.log*
+
+# Test coverage
+typescript/coverage/
+typescript/.nyc_output/
