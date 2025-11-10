@@ -220,4 +220,14 @@ const portugueseGreeting = greet('Oi como vai!');
 console.log('[Ejercicio 3.4]', defaultGreeting, portugueseGreeting);
 
 
+// EJERCICIO 3.5
 
+function layEggs(quantity?: number, color?: string): void {
+    quantity && color ?
+        console.log(
+            `[Ejercicio 3.5] Acabas de poner ${quantity} huevos ${color}. Buen trabajo!`
+        ) :
+        console.log('[Ejercicio 3.5] Ingresar una cantidad y color de huevos.');
+}
+
+layEggs();
