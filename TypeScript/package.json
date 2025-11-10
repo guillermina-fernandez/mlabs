@@ -1,12 +1,12 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "description": "mlab excercises ",
+  "description": "mlab exercises ",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node ./dist/index.js",
-    "prestart": "npm install && nom run build"
+    "prestart": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
