@@ -23,14 +23,15 @@ function startGuessing() {
         result += Math.floor(Math.random() * 7);
     }
     
-    return function guess(num: number) {
-        const numStr = num.toString().padStart(4, '0');
+    return function guess(numStr: string) { // No puedo adivinar números que empiecen con 0. Paso el input a string.
+        //const numStr = num.toString().padStart(4, '0');
         const numArr = numStr.split('');
         let guessedPos = ''
         let guessedNum = ''
         for (let i = 0; i < 4; i++){
             if (numArr[i] === result[i]) {
                 guessedPos += 'X'
+                continue
             } else if (result.includes(numArr[i]!)) {
                 guessedNum += '-'
             }
@@ -41,4 +42,4 @@ function startGuessing() {
 
 
 const newGuess = startGuessing();
-console.log(newGuess(7854))
+console.log(newGuess('7854'))
