@@ -83,7 +83,7 @@ console.log('[Ejercicio 2.3.1]', flattenedT);
 
 // EJERCICIO 2.4
 
-/*interface EggLayer {
+interface EggLayer {
     layEggs(): void;
 }
 
@@ -95,6 +95,11 @@ interface Swimmer {
     swim(depth: number): void;
 }
 
+interface BirdLike extends EggLayer, Flyer { };
+
+interface FishLike extends EggLayer, Swimmer { };
+
+type Animal = Bird | Fish;
 
 class Bird implements BirdLike {
     constructor(public species: string) { }
@@ -120,26 +125,31 @@ class Fish implements FishLike {
     }
 }
 
-function getRandomAnimal() {
-    const animals = [
+function getRandomAnimal(): Animal {
+    const animals: Animal[] = [
         new Bird('puffin'),
         new Bird('kittiwake'),
         new Fish('sea robin'),
         new Fish('leafy seadragon'),
     ];
 
-    return animals[Math.floor(Math.random() * animals.length)];
+    const randomIndex = Math.floor(Math.random() * animals.length)
+    return animals[randomIndex]!;
 }
 
-function interrogateAnimal(animal = getRandomAnimal()) {
-    animal.swim(10) // se llama solo si es un pez
-    animal.fly(10); // se llama solo si es un pajaro
+function interrogateAnimal(animal: Animal = getRandomAnimal()): string {
+    if (animal instanceof Fish) {
+        animal.swim(10) // se llama solo si es un pez    
+    }
+    if (animal instanceof Bird) {
+        animal.fly(10); // se llama solo si es un pajaro   
+    }
 
     return animal.species;
 }
 
-console.log('[Ejercicio 4.4]',
-    `Tenemos un ${interrogateAnimal()} en nuestras manos!`);*/
+console.log('[Ejercicio 2.4]',
+    `Tenemos un ${interrogateAnimal()} en nuestras manos!`);
 
 
 // EJERCICIO 3.1
