@@ -36,3 +36,6 @@ typescript/.nyc_output/
 
 # Jest
 jest/node_modules/
+
+# Ignore coverage reports
+coverage/
