@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --collect-coverage"
+  },
+  "dependencies": {
+    "jest": "^30.2.0"
+  }
+}

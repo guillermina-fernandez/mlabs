@@ -33,3 +33,6 @@ typescript/yarn-error.log*
 # Test coverage
 typescript/coverage/
 typescript/.nyc_output/
+
+# Jest
+jest/node_modules/
