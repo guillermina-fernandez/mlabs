@@ -1,0 +1,28 @@
+// Ejercicio 2.1
+
+// mixin prefijo proveedor
+$prefixes: '-webkit-', '-moz-', '-ms-', '-o-';
+@mixin pref-proveedor($elem-property, $property-value) {
+    @each $prefix in $prefixes {
+        #{$prefix}#{$elem-property}: $property-value;
+    }
+}
+
+// mixin margen fijo y padding
+@mixin custom-margin-padding($margin: 1em, $padding: 1em) {
+    margin: $margin;
+    padding: $padding;
+}
+
+// mixin propiedades de borde
+@mixin custom-border($border...){
+    border: $border;
+}
+
+// EJEMPLOS:
+h1 {
+    @include pref-proveedor(font-family, 'Courier New');
+    @include custom-margin-padding(3em);
+    @include custom-border(1em solid red);
+}
+
