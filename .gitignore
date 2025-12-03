@@ -5,6 +5,7 @@ typescript/out/
 
 # Dependencies
 typescript/node_modules/
+sass/node_modules/
 
 # TypeScript cache
 typescript/*.tsbuildinfo
