@@ -1,0 +1,24 @@
+@function alter-text-color($background-color){
+    @return rgb(
+        255 - red($background-color),
+        255 - green($background-color),
+        255 - blue($background-color)
+    );
+}
+
+$p-background: rgb(255, 160, 122);
+$p-text: rgb(205, 92, 92);
+$tolerance: 50;
+
+p {
+    background-color: $p-background;
+    color: alter-text-color($p-background);
+    @if abs(red($p-background) - red($p-text)) <= 50
+    or abs(green($p-background) - green($p-text)) <= 50
+    or abs(blue($p-background) - blue($p-text)) <= 50 {
+        color: alter-text-color($p-background)
+    } @else {
+        color: $p-text;
+    }
+}
+
