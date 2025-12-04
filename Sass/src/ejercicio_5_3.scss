@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$days: monday, tuesday, wednesday, thursday, friday, saturday, sunday;
+$startColor: rgb(100, 150, 200);
+
+@function dayColor($startColor, $day){
+    $day-index: index($days, $day) - 1;
+    $intensity: $day-index * 3%;
+    $newColor: lighten($startColor, $intensity);
+    @return rgb(
+        round(color.channel($newColor, 'red', $space: rgb)),
+        round(color.channel($newColor, 'green', $space: rgb)),
+        round(color.channel($newColor, 'blue', $space: rgb))
+    )
+}
+
+@each $day in $days {
+    .#{$day}{
+        background-color: dayColor($startColor, $day);
+    }
+}
+
