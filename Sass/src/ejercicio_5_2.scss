@@ -1,0 +1,16 @@
+$days: monday, tuesday, wednesday, thursday, friday, saturday, sunday;
+$dayNbr: 0;
+
+
+@each $day in $days {
+    .#{$day} {
+        @if $dayNbr == 5 or $dayNbr == 6 {
+            font-weight: bolder;    
+            background-color: greenyellow;
+        } @else {
+            font-weight: bold;
+            background-color: aquamarine;
+        }
+    }
+    $dayNbr: $dayNbr + 1 !global;
+}
