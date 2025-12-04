@@ -1,0 +1,36 @@
+.btn, .btn-delete, .btn-save {
+  margin: 3em;
+}
+
+.btn-save {
+  color: green;
+}
+
+.btn-delete {
+  color: red;
+}
+
+input:required {
+  color: aquamarine;
+}
+
+table {
+  border: 1em solid black;
+}
+table th {
+  background-color: red;
+}
+table tr:nth-child(even) {
+  background-color: yellow;
+}
+table tr:nth-child(odd) {
+  background-color: yellowgreen;
+}
+
+h1 {
+  margin-left: 1em;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
