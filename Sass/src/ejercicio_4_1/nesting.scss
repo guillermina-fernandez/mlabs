@@ -1,0 +1,12 @@
+table {
+    border: 1em solid black;
+    th {
+        background-color: red;
+    }
+    tr:nth-child(even) {
+        background-color: yellow;
+    }
+    tr:nth-child(odd){
+        background-color: yellowgreen;
+    }
+}

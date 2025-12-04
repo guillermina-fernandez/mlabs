@@ -1,0 +1,9 @@
+@mixin required-input {
+    color: aquamarine;
+}
+
+
+input:required {
+    @include required-input;
+}
+

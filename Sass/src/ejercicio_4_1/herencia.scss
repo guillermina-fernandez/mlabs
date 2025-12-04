@@ -1,0 +1,13 @@
+.btn {
+    margin: 3em;
+}
+
+.btn-save {
+    @extend .btn;
+    color: green;
+}
+
+.btn-delete {
+    @extend .btn;
+    color: red;
+}

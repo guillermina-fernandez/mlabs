@@ -1,0 +1,13 @@
+@function margin-ratio($margin-left){
+    $margin-top: 3 * $margin-left;
+    @return $margin-top;
+}
+
+$h1-m-left: 1em;
+
+h1 {
+    margin-left: $h1-m-left;
+    margin-top: margin-ratio($h1-m-left);
+    margin-bottom: margin-ratio($h1-m-left) / 2;
+}
+
