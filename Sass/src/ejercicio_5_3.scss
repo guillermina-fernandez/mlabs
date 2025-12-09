@@ -11,7 +11,7 @@ $startColor: rgb(100, 150, 200);
         round(color.channel($newColor, 'red', $space: rgb)),
         round(color.channel($newColor, 'green', $space: rgb)),
         round(color.channel($newColor, 'blue', $space: rgb))
-    )
+    );
 }
 
 @each $day in $days {
